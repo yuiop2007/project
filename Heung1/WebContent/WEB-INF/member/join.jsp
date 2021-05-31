@@ -5,6 +5,16 @@
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
   	<%@ include file="../../include/bs.jsp" %>
+<style>
+body, code {
+    font: 11px 'Open Sans','Lato',arial,"맑은 고딕",'Malgun Gothic',나눔고딕,'Nanum Gothic',"돋움",Dutum,san-serif;
+    color: #555;
+    background: #fff;
+}
+  	.displaynone {
+    display: none;
+}
+</style>
 </head>
 <body>
 	<div class="jumbotron text-center">
