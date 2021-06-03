@@ -26,28 +26,20 @@ public class SubController extends HttpServlet {
 			viewPage = "/WEB-INF/member/join.jsp";
 		}
 		else if(com.equals("/mypage")) {
-			viewPage = "/WEB-INF/submenu/mypage.jsp";
+			viewPage = "/WEB-INF/member/mypage.jsp";
 		}
-//		else if(com.equals("/idCheck")) {
-//			command = new IdCheckCommand();
-//			command.execute(request, response);
-//			viewPage = "/WEB-INF/member/idCheck.jsp";
-//		}
-//		else if(com.equals("/nickCheck")) {
-//			command = new NickCheckCommand();
-//			command.execute(request, response);
-//			viewPage = "/WEB-INF/member/nickCheck.jsp";
-//		}
-//		else if(com.equals("/joinOk")) {
-//			command = new JoinOkCommand();
-//			command.execute(request, response);
-//			viewPage = "/WEB-INF/message/message.jsp";
-//		}
-//		else if(com.equals("/loginOk")) {
-//			command = new LoginOkCommand();
-//			command.execute(request, response);
-//			viewPage = "/WEB-INF/message/message.jsp";
-//		}
+		else if(com.equals("/notice")) {
+			viewPage = "/WEB-INF/board/notice.jsp";
+		}
+		else if(com.equals("/qna")) {
+			viewPage = "/WEB-INF/board/qna.jsp";
+		}
+		else if(com.equals("/review")) {
+			viewPage = "/WEB-INF/board/review.jsp";
+		}
+		else if(com.equals("/event")) {
+			viewPage = "/WEB-INF/board/event.jsp";
+		}
 //		else if(com.equals("/memberMain")) {
 //			//command = new MemberMainCommand();
 //			//command.execute(request, response);

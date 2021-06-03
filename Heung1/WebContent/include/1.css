@@ -1,0 +1,6 @@
+@charset "UTF-8";
+body, code {
+    font: 11px 'Open Sans','Lato',arial,"맑은 고딕",'Malgun Gothic',나눔고딕,'Nanum Gothic',"돋움",Dutum,san-serif;
+    color: #555;
+    background: #fff;
+}
