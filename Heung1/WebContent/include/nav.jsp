@@ -19,7 +19,28 @@
 	.nav-link:hover{
 	  color: gray;
 	}
+	.bg-light {
+	  background-color: #fff!important;
+	}
+	.nav1{
+		opacity: 0.8;
+	}
 </style>
+<script>
+$(document).ready(function () {
+    var menu = $('.nav1');
+    var origOffsetY = menu.offset().top;
+
+    function scroll() {
+        if ($(window).scrollTop() >= origOffsetY) {
+            $(menu).addClass('fixed-top');
+        } else {
+            $(menu).removeClass('fixed-top');
+        }
+    }
+    document.onscroll = scroll;
+});
+</script>
 	<nav class="nav1 navbar navbar-expand-sm bg-light justify-content-center">
 		<ul class="navbar-nav">
 			<li class="nav-item">
@@ -48,13 +69,13 @@
 	<nav class="nav2 navbar navbar-expand-sm bg-light justify-content-center">
 		<ul class="navbar-nav">
 			<li class="nav-item2">
-				<a class="nav-link" href="<%=request.getContextPath()%>/member/login.sub">Login </a>
+				<a class="nav-link" href="<%=request.getContextPath()%>/member/login.mem">Login </a>
 			</li>
 			<li class="nav-item2">
-				<a class="nav-link" href="<%=request.getContextPath()%>/member/join.sub">join </a>
+				<a class="nav-link" href="<%=request.getContextPath()%>/member/join.mem">join </a>
 			</li>
 			<li class="nav-item2">
-				<a class="nav-link" href="<%=request.getContextPath()%>/member/mypage.sub">Mypage </a>
+				<a class="nav-link" href="<%=request.getContextPath()%>/member/mypage.mem">Mypage </a>
 			</li>
 			<li class="nav-item2">
 				<a class="nav-link" href="#">Notice</a>

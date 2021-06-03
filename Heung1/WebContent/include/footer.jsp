@@ -121,7 +121,7 @@ a:hover {
 				<div class="row">
 					<div class="col-md-6 ">
 						<div class="logo-part">
-							<img src="../image/logo2.png" class="w-50 logo-footer">
+							<img src="<%=request.getContextPath() %>/image/logo2.png" class="w-50 logo-footer">
 							<p>7637 Laurel Dr. King Of Prussia, PA 19406</p>
 							<p>Use this tool as test data for an automated system or find your next pen</p>
 						</div>
@@ -163,7 +163,7 @@ a:hover {
 					<div class="col-md-6 ">
 						<h6>Newsletter</h6>
 						<div class="social">
-							<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+							<a href="#"><img src="<%=request.getContextPath() %>/image/facebook.png"/></a> <a href="#"><img src="<%=request.getContextPath() %>/image/insta.png"/></a>
 						</div>
 						<p>That's technology limitation of LCD monitors</p>
 					</div>
