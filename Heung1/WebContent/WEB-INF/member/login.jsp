@@ -89,11 +89,11 @@ h6{
 			<table>
 				<tr>
 					<td class="ftd">아이디</td>
-					<td colspan="10"><input type="text" id="mid" name="mid"></td>
+					<td><input type="text" id="mid" name="mid" maxlength="16"></td>
 				</tr>
 				<tr>
 					<td class="ftd">비밀번호</td>
-					<td colspan="10"><input type="password" id="pwd" name="pwd"></td>
+					<td><input type="password" id="pwd" name="pwd" maxlength="16" autocomplete="off"></td>
 				</tr>
 			</table>
 			<div class="jumbotron text-center">

@@ -122,13 +122,17 @@ a:hover {
 					<div class="col-md-6 ">
 						<div class="logo-part">
 							<img src="<%=request.getContextPath() %>/image/logo2.png" class="w-50 logo-footer">
-							<p>7637 Laurel Dr. King Of Prussia, PA 19406</p>
-							<p>Use this tool as test data for an automated system or find your next pen</p>
+							<p>전화상담은 운영하지 않습니다.</p><br/>
+		                    <p>MON-FRI AM 10:00 ~ PM 6:00<br/>
+		                       LUNCH PM 12:00 ~ PM 01:00<br/>
+		                       SAT.SUN.HOLIDAY OFF
+		                    </p>
 						</div>
 					</div>
 					<div class="col-md-6 px-4">
 						<h6>About Company</h6>
-						<p>But horizontal lines can only be a full pixel high.</p>
+						<b>COMPANY</b> : 미님<br/><b>CEO</b> : 김도흥<br/><b>ADDRESS</b> : 충청북도 청주시 흥덕구 복대동 3366 <br/>
+						<b>CPO</b> : 김도흥 yuoip2007@naver.com<br/>
 						<a href="#" class="btn-footer"> More Info </a><br> <a href="#" class="btn-footer"> Contact Us</a>
 					</div>
 				</div>
@@ -140,7 +144,7 @@ a:hover {
 						<div class="row ">
 							<div class="col-md-6">
 								<ul>
-									<li><a href="#"> Home</a></li>
+									<li><a href="<%=request.getContextPath()%>/main.jsp"> Home</a></li>
 									<li><a href="#"> About</a></li>
 									<li><a href="#"> Service</a></li>
 									<li><a href="#"> Team</a></li>

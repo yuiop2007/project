@@ -133,30 +133,30 @@ h6{
 		<%@ include file="../../include/nav.jsp"%>
 	</div>
 	<div class="container">
-		<form>
+		<form name="joinform" method="post" action="<%=request.getContextPath()%>/joinOk.mem">
 			<h6>기본정보</h6>
 			<hr />
 			<table>
 				<tr>
 					<td class="ftd">아이디</td>
-					<td colspan="3"><input type="text" id="mid" name="mid" required></td>
+					<td colspan="3"><input type="text" name="mid" maxlength="16" required placeholder="(영문소문자/숫자, 4~16자)"></td>
 				</tr>
 				<tr>
 					<td class="ftd">비밀번호</td>
-					<td colspan="3"><input type="password" id="pwd" name="pwd" required></td>
+					<td colspan="3"><input type="password" name="pwd" autocomplete="off" maxlength="16" required placeholder="(영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자)"></td>
 				</tr>
 				<tr>
 					<td class="ftd">비밀번호 확인</td>
-					<td colspan="3"><input type="password" id="pwdOk" name="pwdOk" required></td>
+					<td colspan="3"><input type="password" name="pwdCheck" autocomplete="off" maxlength="16" required></td>
 				</tr>
 				<tr>
 					<td class="ftd">이름</td>
-					<td colspan="3"><input type="text" id="name" name="name" required></td>
+					<td colspan="3"><input type="text" name="name" maxlength="30" required></td>
 				</tr>
 				<tr>
 					<td class="ftd">주소</td>
 					<td>
-						<input type="text" id="sample6_postcode" placeholder="우편번호">
+						<input type="text" id="sample6_postcode" name="postcode1" placeholder="우편번호" readonly="readonly" maxlength="14">
 					</td>
 					<td>
 						<input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
@@ -164,42 +164,71 @@ h6{
 				</tr>
 				<tr>
 					<td></td>
-					<td colspan="3"><input type="text" id="sample6_address" placeholder="주소"><br></td>
+					<td colspan="3"><input type="text" name="addr1" id="sample6_address" placeholder="주소" readonly="readonly"><br></td>
 				</tr>
 				<tr>
 					<td></td>
-					<td class="adtd" colspan="2"><input type="text" id="sample6_extraAddress" placeholder="기본주소"></td>
-					<td><input type="text" id="sample6_detailAddress" placeholder="상세주소"></td>
+					<td class="adtd" colspan="2"><input type="text" id="sample6_extraAddress" name="addr2" placeholder="기본주소" readonly="readonly"></td>
+					<td><input type="text" id="sample6_detailAddress" name="addr3" placeholder="상세주소"></td>
 				</tr>
 				<tr>
 					<td class="ftd">일반전화</td>
 					<td class=tel1>
-						<select id="tel1" name="tel1">
-					    	<option>010</option>
-					      	<option>2</option>
-					      	<option>3</option>
-					      	<option>4</option>
+						<select name="tel[]">
+					    	<option value="02">02</option>
+							<option value="031">031</option>
+							<option value="032">032</option>
+							<option value="033">033</option>
+							<option value="041">041</option>
+							<option value="042">042</option>
+							<option value="043">043</option>
+							<option value="044">044</option>
+							<option value="051">051</option>
+							<option value="052">052</option>
+							<option value="053">053</option>
+							<option value="054">054</option>
+							<option value="055">055</option>
+							<option value="061">061</option>
+							<option value="062">062</option>
+							<option value="063">063</option>
+							<option value="064">064</option>
+							<option value="0502">0502</option>
+							<option value="0503">0503</option>
+							<option value="0504">0504</option>
+							<option value="0505">0505</option>
+							<option value="0506">0506</option>
+							<option value="0507">0507</option>
+							<option value="070">070</option>
+							<option value="010">010</option>
+							<option value="011">011</option>
+							<option value="016">016</option>
+							<option value="017">017</option>
+							<option value="018">018</option>
+							<option value="019">019</option>
+							<option value="0508">0508</option>
 					    </select>
 					</td>
-					<td class="tel2"><input type="text" id="tel2" name="tel2"></td>
-					<td class="tel3"><input type="text" id="tel3" name="tel3"></td>
+					<td class="tel2"><input type="text" name="tel[]" maxlength="4"></td>
+					<td class="tel3"><input type="text" name="tel[]" maxlength="4"></td>
 				</tr>
 				<tr>
 					<td class="ftd">휴대전화</td>
 					<td class="tel1">
-						<select id="phone1" name="phone1">
-					    	<option>010</option>
-					      	<option>2</option>
-					      	<option>3</option>
-					      	<option>4</option>
+						<select name="mobile[]">
+					    	<option value="010">010</option>
+							<option value="011">011</option>
+							<option value="016">016</option>
+							<option value="017">017</option>
+							<option value="018">018</option>
+							<option value="019">019</option>
 					    </select>
 					</td>
-					<td class="tel2"><input type="text" id="phone2" name="phone2"></td>
-					<td class="tel3"><input type="text" id="phone3" name="phone3"></td>
+					<td class="tel2"><input type="text" name="mobile[]" maxlength="4" required></td>
+					<td class="tel3"><input type="text" name="mobile[]" maxlength="4" required></td>
 				</tr>
 				<tr>
 					<td class="ftd">이메일</td>
-					<td colspan="10"><input type="email" id="email" name="email"></td>
+					<td colspan="10"><input type="email" name="email"></td>
 				</tr>
 			</table>
 			<hr />
@@ -207,27 +236,32 @@ h6{
 			<table>
 				<tr>
 					<td class="ftd">성별</td>
-					<td class="radiotd" colspan="3"><input type=radio>남자&nbsp;&nbsp;&nbsp; <input type=radio>여자</td>
-					
+					<td class="radiotd" colspan="3">
+						<input type=radio name="gender" value="M" checked="checked">남자&nbsp;&nbsp;&nbsp; 
+						<input type=radio name="gender" value="F">여자
+					</td>
 				</tr>
 				<tr>
 					<td class="ftd">생년월일</td>
-					<td class="birthtd"><input type="text" id="year" name="year"></td>
+					<td class="birthtd"><input type="text" name="birth_year" maxlength="4"></td>
 					<td>년</td>
-					<td class="birthtd"><input type="text" id="month" name="month"></td>
+					<td class="birthtd"><input type="text" name="birth_month" maxlength="2"></td>
 					<td>월</td>
-					<td class="birthtd"><input type="text" id="day" name="day"></td>
+					<td class="birthtd"><input type="text" name="birth_day" maxlength="2"></td>
 					<td>일&nbsp;&nbsp;&nbsp;&nbsp;</td>
-					<td class="radiotd"><input type=radio>양력&nbsp;&nbsp;&nbsp; <input type=radio>음력</td>
+					<td class="radiotd">
+						<input type=radio name="is_solar_calendar" value="T" checked="checked">양력&nbsp;&nbsp;&nbsp; 
+						<input type=radio name="is_solar_calendar" value="F">음력
+					</td>
 				</tr>
 				<tr>
 					<td class="ftd">추천인 아이디</td>
-					<td colspan="10"><input type="text" id="mid" name="mid"></td>
+					<td colspan="10"><input type="text" name="cmid"></td>
 				</tr>
 			</table>
 			<div class="jumbotron text-center">
 				<button type="button" class="btn btn-outline-dark">회원가입취소</button>
-				<button type="button" class="btn btn-dark">회원가입</button>
+				<button type="button" class="btn btn-dark" onclick="memberJoinAction()">회원가입</button>
 			</div>
 		</form>
 	</div>
