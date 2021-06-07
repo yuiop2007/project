@@ -110,7 +110,7 @@ a:hover {
 	height: 100%;
 }
 .ftcontainer{
-	padding: 0 400px 0 400px;
+	padding: 0 15% 0 15%;
 }
 </style>
 </head>

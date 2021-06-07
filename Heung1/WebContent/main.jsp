@@ -20,6 +20,10 @@ html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre,
 	margin: 0;
 	padding: 0;
 }
+.container {
+	width:100%;
+	padding: 0 10% 0 10%;
+}
 </style>
 
 </head>
@@ -31,6 +35,6 @@ html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre,
 	<div class="container">
 	
 	</div>
-	<%@ include file="../../include/footer.jsp"%>
+		<%@ include file="../../include/footer.jsp"%>
 </body>
 </html>
