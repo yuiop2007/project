@@ -34,7 +34,7 @@ input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, sel
 }
 
 .container {
-	padding: 0 250px 0 250px;
+	padding: 0 10% 0 10%;
 }
 
 table, tbody{

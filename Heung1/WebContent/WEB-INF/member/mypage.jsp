@@ -20,6 +20,9 @@ html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre,
 	margin: 0;
 	padding: 0;
 }
+.container {
+	padding: 0 250px 0 250px;
+}
 </style>
 
 </head>
@@ -29,7 +32,9 @@ html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre,
 		<%@ include file="../../include/nav.jsp"%>
 	</div>
 	<div class="container">
-	
+	<form>
+		<h6>MyPage</h6>
+	</form>
 	</div>
 	<%@ include file="../../include/footer.jsp"%>
 </body>

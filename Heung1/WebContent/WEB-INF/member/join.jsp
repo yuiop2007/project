@@ -34,7 +34,7 @@ input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, sel
 }
 
 .container {
-	padding: 0 250px 0 250px;
+	padding: 0 10% 0 10%;
 }
 
 table, tbody {
@@ -139,19 +139,19 @@ h6{
 			<table>
 				<tr>
 					<td class="ftd">아이디</td>
-					<td colspan="3"><input type="text" name="mid" maxlength="16" required placeholder="(영문소문자/숫자, 4~16자)"></td>
+					<td colspan="3"><input type="text" name="mId" maxlength="16" required placeholder="(영문소문자/숫자, 4~16자)"></td>
 				</tr>
 				<tr>
 					<td class="ftd">비밀번호</td>
-					<td colspan="3"><input type="password" name="pwd" autocomplete="off" maxlength="16" required placeholder="(영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자)"></td>
+					<td colspan="3"><input type="password" name="mPwd" autocomplete="off" maxlength="16" required placeholder="(영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자)"></td>
 				</tr>
 				<tr>
 					<td class="ftd">비밀번호 확인</td>
-					<td colspan="3"><input type="password" name="pwdCheck" autocomplete="off" maxlength="16" required></td>
+					<td colspan="3"><input type="password" name="mPwdCheck" autocomplete="off" maxlength="16" required></td>
 				</tr>
 				<tr>
 					<td class="ftd">이름</td>
-					<td colspan="3"><input type="text" name="name" maxlength="30" required></td>
+					<td colspan="3"><input type="text" name="mName" maxlength="30" required></td>
 				</tr>
 				<tr>
 					<td class="ftd">주소</td>
@@ -171,7 +171,7 @@ h6{
 					<td class="adtd" colspan="2"><input type="text" id="sample6_extraAddress" name="addr2" placeholder="기본주소" readonly="readonly"></td>
 					<td><input type="text" id="sample6_detailAddress" name="addr3" placeholder="상세주소"></td>
 				</tr>
-				<tr>
+			<!-- 	<tr>
 					<td class="ftd">일반전화</td>
 					<td class=tel1>
 						<select name="tel[]">
@@ -210,7 +210,7 @@ h6{
 					</td>
 					<td class="tel2"><input type="text" name="tel[]" maxlength="4"></td>
 					<td class="tel3"><input type="text" name="tel[]" maxlength="4"></td>
-				</tr>
+				</tr> -->
 				<tr>
 					<td class="ftd">휴대전화</td>
 					<td class="tel1">
