@@ -112,6 +112,9 @@ a:hover {
 .ftcontainer{
 	padding: 0 14% 0 14%;
 }
+h6{
+	font-weight: bold;
+}
 </style>
 </head>
 <footer class="container-fluid bg-grey py-5">

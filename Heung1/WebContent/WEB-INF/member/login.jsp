@@ -34,6 +34,7 @@ input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, sel
 }
 
 .container {
+	width:100%;
 	padding: 0 10% 0 10%;
 }
 
