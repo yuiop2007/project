@@ -8,10 +8,10 @@ create table member(
 	mAddress varchar(500) null,
 	mPhone varchar(300) not null,
 	mEmail varchar(100) null,
-	mGender int default 0,
+	mGender varchar(10) default 'M',
 	mRdate date not null,
 	mBirth date null,
-	mLever int default 0 not null,
+	mLevel int default 0 not null,
 	mBuy int default 0,
 	mDrop int default 0,
 	primary key(mId)
