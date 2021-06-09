@@ -126,6 +126,11 @@ h6{
             }
         }).open();
     }
+    
+    function JoinAction(){
+    	
+    	joinform.submit();
+    }
 </script>
 </head>
 <body>
@@ -157,7 +162,7 @@ h6{
 				<tr>
 					<td class="ftd">주소</td>
 					<td>
-						<input type="text" id="sample6_postcode" name="postcode1" placeholder="우편번호" readonly="readonly" maxlength="14">
+						<input type="text" id="sample6_postcode" name="mPost" placeholder="우편번호" readonly="readonly" maxlength="14">
 					</td>
 					<td>
 						<input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
@@ -165,12 +170,12 @@ h6{
 				</tr>
 				<tr>
 					<td></td>
-					<td colspan="3"><input type="text" name="addr1" id="sample6_address" placeholder="주소" readonly="readonly"><br></td>
+					<td colspan="3"><input type="text" name="add1" id="sample6_address" placeholder="주소" readonly="readonly"><br></td>
 				</tr>
 				<tr>
 					<td></td>
-					<td class="adtd" colspan="2"><input type="text" id="sample6_extraAddress" name="addr2" placeholder="기본주소" readonly="readonly"></td>
-					<td><input type="text" id="sample6_detailAddress" name="addr3" placeholder="상세주소"></td>
+					<td class="adtd" colspan="2"><input type="text" id="sample6_extraAddress" name="add2" placeholder="기본주소" readonly="readonly"></td>
+					<td><input type="text" id="sample6_detailAddress" name="add3" placeholder="상세주소"></td>
 				</tr>
 			<!-- 	<tr>
 					<td class="ftd">일반전화</td>
@@ -215,7 +220,7 @@ h6{
 				<tr>
 					<td class="ftd">휴대전화</td>
 					<td class="tel1">
-						<select name="mobile[]">
+						<select name="tel1">
 					    	<option value="010">010</option>
 							<option value="011">011</option>
 							<option value="016">016</option>
@@ -224,12 +229,12 @@ h6{
 							<option value="019">019</option>
 					    </select>
 					</td>
-					<td class="tel2"><input type="text" name="mobile[]" maxlength="4" required></td>
-					<td class="tel3"><input type="text" name="mobile[]" maxlength="4" required></td>
+					<td class="tel2"><input type="text" name="tel2" maxlength="4" required></td>
+					<td class="tel3"><input type="text" name="tel3" maxlength="4" required></td>
 				</tr>
 				<tr>
 					<td class="ftd">이메일</td>
-					<td colspan="10"><input type="email" name="email"></td>
+					<td colspan="10"><input type="email" name="mEmail"></td>
 				</tr>
 			</table>
 			<hr />
@@ -238,8 +243,8 @@ h6{
 				<tr>
 					<td class="ftd">성별</td>
 					<td class="radiotd" colspan="3">
-						<input type=radio name="gender" value="M" checked="checked">남자&nbsp;&nbsp;&nbsp; 
-						<input type=radio name="gender" value="F">여자
+						<input type=radio name="mGender" value="M" checked="checked">남자&nbsp;&nbsp;&nbsp; 
+						<input type=radio name="mGender" value="F">여자
 					</td>
 				</tr>
 				<tr>
@@ -257,12 +262,12 @@ h6{
 				</tr>
 				<tr>
 					<td class="ftd">추천인 아이디</td>
-					<td colspan="10"><input type="text" name="cmid"></td>
+					<td colspan="10"><input type="text" name="mCmid"></td>
 				</tr>
 			</table>
 			<div class="jumbotron text-center">
 				<button type="button" class="btn btn-outline-dark">회원가입취소</button>
-				<button type="button" class="btn btn-dark" onclick="memberJoinAction()">회원가입</button>
+				<button type="button" class="btn btn-dark" onclick="JoinAction()">회원가입</button>
 			</div>
 		</form>
 	</div>

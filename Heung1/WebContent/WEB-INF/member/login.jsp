@@ -77,6 +77,12 @@ h6{
 }
 
 </style>
+<script>
+	function LoginAction(){
+		
+		loginform.submit();
+	}
+</script>
 </head>
 <body>
 	<div class="jumbotron text-center">
@@ -90,16 +96,16 @@ h6{
 			<table>
 				<tr>
 					<td class="ftd">아이디</td>
-					<td><input type="text" id="mid" name="mid" maxlength="16"></td>
+					<td><input type="text" id="mid" name="mId" maxlength="16"></td>
 				</tr>
 				<tr>
 					<td class="ftd">비밀번호</td>
-					<td><input type="password" id="pwd" name="pwd" maxlength="16" autocomplete="off"></td>
+					<td><input type="password" id="pwd" name="mPwd" maxlength="16" autocomplete="off"></td>
 				</tr>
 			</table>
 			<div class="jumbotron text-center">
 				<button type="button" class="btn btn-outline-dark" action="">로그인취소</button>
-				<button type="button" class="btn btn-dark">로그인</button>
+				<button type="button" class="btn btn-dark" onclick="LoginAction()">로그인</button>
 			</div>
 		</form>
 	</div>

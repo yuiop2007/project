@@ -1,4 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+  int level = session.getAttribute("slevel")==null ? 99 : (int) session.getAttribute("slevel");
+	//String atom = request.getParameter("atom");
+%>
+
 <style>
 	html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, img {
     margin: 0;
@@ -68,12 +73,18 @@ $(document).ready(function () {
 	</nav>
 	<nav class="nav2 navbar navbar-expand-sm bg-light justify-content-center">
 		<ul class="navbar-nav">
+<%    if(level == 99) { %>
 			<li class="nav-item2">
 				<a class="nav-link" href="<%=request.getContextPath()%>/member/login.mem">Login </a>
 			</li>
 			<li class="nav-item2">
 				<a class="nav-link" href="<%=request.getContextPath()%>/member/join.mem">join </a>
 			</li>
+<%    } else { %>
+			<li class="nav-item2">
+				<a class="nav-link" href="<%=request.getContextPath()%>/member/logout.mem">Logout </a>
+			</li>
+<% } %>		
 			<li class="nav-item2">
 				<a class="nav-link" href="<%=request.getContextPath()%>/member/mypage.mem">Mypage </a>
 			</li>

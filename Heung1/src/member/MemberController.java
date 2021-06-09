@@ -30,26 +30,19 @@ public class MemberController extends HttpServlet {
 			command.execute(request, response);
 			viewPage = "/WEB-INF/message/message.jsp";
 		}
+		else if(com.equals("/loginOk")) {
+			command = new LoginOkCommand();
+			command.execute(request, response);
+			viewPage = "/WEB-INF/message/message.jsp";
+		}
+		else if(com.equals("/logout")) {
+			command = new LogoutCommand();
+			command.execute(request, response);
+			viewPage = "/WEB-INF/message/message.jsp";
+		}
 		else if(com.equals("/mypage")) {
 			viewPage = "/WEB-INF/member/mypage.jsp";
 		}
-		else if(com.equals("/notice")) {
-			viewPage = "/WEB-INF/board/notice.jsp";
-		}
-		else if(com.equals("/qna")) {
-			viewPage = "/WEB-INF/board/qna.jsp";
-		}
-		else if(com.equals("/review")) {
-			viewPage = "/WEB-INF/board/review.jsp";
-		}
-		else if(com.equals("/event")) {
-			viewPage = "/WEB-INF/board/event.jsp";
-		}
-//		else if(com.equals("/memberMain")) {
-//			//command = new MemberMainCommand();
-//			//command.execute(request, response);
-//			viewPage = "/WEB-INF/member/memberMain.jsp";
-//		}
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
 		dispatcher.forward(request, response);
